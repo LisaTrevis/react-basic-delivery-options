@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import list from "./list";
+import Categories from "./Categories";
+import Restaurants from "./Restaurants";
 
 function App() {
+  const [locations, setLocations] = useState(list);
+  const categories = [
+    "all",
+    ...new Set(list.map((listItem) => listItem.category)),
+  ];
+
+  const filterItems = (category) => {
+    if (category === "all") {
+      setLocations(list);
+      return;
+    }
+    const newItems = list.filter((listItem) => listItem.category === category);
+    setLocations(newItems);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <section>
+        <div>
+          <h1>Delivery Options</h1>
+        </div>
+        <Categories categories={categories} filterItems={filterItems} />
+        <Restaurants places={locations} />
+      </section>
+    </main>
   );
 }
 
