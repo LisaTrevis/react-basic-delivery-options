@@ -10,9 +10,9 @@ const restaurants = ({ places }) => {
             <img src={img} alt={name} />
             <header className="location-info">
               <h2>{name}</h2>
-              <h3>{address}</h3>
-              <h3>{phone}</h3>
-              <h3>Price: {price}</h3>
+              <h4>{address}</h4>
+              <h4>{phone}</h4>
+              <h4>Price: {price}</h4>
             </header>
           </article>
         );

@@ -23,7 +23,7 @@ function App() {
       <section>
         <div className="header">
           <h1>Delivery Decider</h1>
-          <h3>What are you in the mood for?</h3>
+          <h4>What are you in the mood for?</h4>
         </div>
         <Categories categories={categories} filterItems={filterItems} />
         <Restaurants places={locations} />
