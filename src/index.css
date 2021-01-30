@@ -9,6 +9,7 @@ Variables
   --proj-clr2: rgb(245, 245, 159);
   --proj-clr3: white;
   --proj-btn-outline: #aed581;
+  --clr-text: rgb(54, 53, 53);
   --transition: all 0.1s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -45,12 +46,17 @@ ul {
 a {
   text-decoration: none;
 }
-
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-text);
+}
 /*  global classes */
 
 /* section */
 section {
-  width: 60vw;
+  width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
 }
@@ -65,17 +71,18 @@ body {
   background: var(--proj-clr2);
 }
 
-h1,
-h2,
-h3 {
-  color: var(--proj-clr1);
-}
 h1 {
-  color: rgb(54, 53, 53);
+  color: var(--clr-text);
+  font-size: 3rem;
   letter-spacing: 0.1rem;
   line-height: 1.25;
-  margin: 2rem auto;
+  margin-top: 1.5rem;
   text-align: center;
+}
+
+.header h3 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .category-btns {
@@ -137,24 +144,29 @@ h1 {
 }
 
 img {
-  width: 250px;
+  width: 175px;
   height: 175px;
   padding: 10px;
   object-fit: cover;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--proj-btn-outline);
+}
+
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   body {
     font-size: 1rem;
@@ -165,10 +177,19 @@ img {
   h4 {
     line-height: 1;
   }
+  .header h3 {
+    margin-top: 1rem;
+  }
+  img {
+    width: 250px;
+    height: 175px;
+    padding: 10px;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 992px) {
   section {
-    width: 65vw;
+    width: 80vw;
   }
 }

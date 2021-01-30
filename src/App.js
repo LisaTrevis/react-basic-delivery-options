@@ -21,8 +21,9 @@ function App() {
   return (
     <main>
       <section>
-        <div>
-          <h1>Delivery Options</h1>
+        <div className="header">
+          <h1>Delivery Decider</h1>
+          <h3>What are you in the mood for?</h3>
         </div>
         <Categories categories={categories} filterItems={filterItems} />
         <Restaurants places={locations} />
