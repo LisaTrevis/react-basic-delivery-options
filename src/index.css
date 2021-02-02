@@ -5,12 +5,11 @@ Variables
 */
 
 :root {
-  --pg-bg: white;
-  --app-bg: lightgrey;
-  --text-clr: darkgray;
-  --rest-hvr-bg: lightpink;
-  --btn-bg: lightpink;
-  --btn-bord: orange;
+  --clr-pg-bg: rgb(4, 121, 14);
+  --clr-app-bg: rgb(227, 252, 229);
+  --clr-text: rgb(66, 65, 65);
+  --clr-btn-light: rgb(157, 201, 160);
+  --clr-btn-dark: rgb(4, 121, 14);
   --transition: all 0.1s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -62,6 +61,7 @@ section {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
+  background-color: var(--clr-app-bg);
 }
 
 section.section {
@@ -74,9 +74,9 @@ Delivery Options
 ===============
 */
 
-/* body {
-  background: var(--proj-main-bkgd);
-} */
+body {
+  background: var(--clr-pg-bg);
+}
 
 h1 {
   color: var(--clr-text);
@@ -99,50 +99,49 @@ h1 {
 }
 
 .filter-btn {
-  /* border: 3px solid var(--proj-btn-outline); */
+  border: 3px solid var(--clr-btn-dark);
   font-size: 0.5rem;
   font-weight: bold;
   margin: 0 0.4rem;
   letter-spacing: 1px;
   padding: 0.375rem 0.75rem;
-  /* background: var(--proj-clr3); */
-  /* color: var(--proj-clr1); */
+  background: var(--clr-btn-light);
+  color: var(--clr-btn-dark);
   border-radius: 10px;
   transition: var(--transition);
   box-shadow: var(--dark-shadow);
 }
 
 .filter-btn:hover {
-  /* border: 3px solid var(--proj-btn-outline); */
+  border: 3px solid var(--clr-btn-light);
   font-weight: bold;
   margin: 0 0.5rem;
   letter-spacing: 1px;
   padding: 0.375rem 0.75rem;
-  /* background: var(--proj-clr1); */
-  /* color: var(--proj-clr3); */
+  background: var(--clr-btn-dark);
+  color: var(--clr-btn-light);
   border-radius: 10px;
 }
 
-/* .restaurant-list {
-  background: var(--proj-light-bkgd);
+.restaurant-list {
   box-shadow: var(--dark-shadow);
-} */
+}
 
 .locations {
-  /* border: 2px solid var(--proj-light-bkgd); */
+  border: 2px solid var(--clr-btn-light);
   border-radius: 10px;
-  /* background: var(--proj-clr3); */
+  background: var(--clr-btn-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 10px 20px;
   transition: var(--transition);
   /* flex-wrap: wrap; */
 }
 
-/* .locations:hover {
-  border: 4px solid var(--proj-btn-outline);
-} */
+.locations:hover {
+  border: 4px solid var(--clr-btn-dark);
+}
 
 .location-info {
   box-sizing: border-box;
@@ -170,7 +169,7 @@ img {
 
 button:focus {
   outline: none;
-  /* box-shadow: 0 0 0 2px var(--proj-btn-outline); */
+  box-shadow: 0 0 0 2px var(--clr-btn-dark);
 }
 
 @media screen and (min-width: 500px) {
