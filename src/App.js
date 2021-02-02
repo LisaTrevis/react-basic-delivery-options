@@ -20,7 +20,7 @@ function App() {
   };
   return (
     <main>
-      <section>
+      <section className="section">
         <div className="header">
           <h1>Delivery Decider</h1>
           <h4>What are you in the mood for?</h4>
